@@ -14,6 +14,7 @@ try {
     '$1protobufjs/minimal.js$2'
   );
   writeFileSync(filePath, content, 'utf8');
+  
   console.log(`✅ Fixed imports in ${filePath}`);
 } catch (error) {
   console.error(`❌ Error fixing imports: ${error.message}`);
