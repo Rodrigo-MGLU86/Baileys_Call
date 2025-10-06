@@ -11,7 +11,9 @@
 - ✅ **Removed Timeout** – No unwanted session timeouts  
 - ✅ **Updated Proto** – The Proto has been Updated to the newest Version
 - ✅ **isBot Fixed in Groups** – `isBot` detection now works correctly in group chats  
+- ✅ **Fixed ListType/ListMessage** – Now you can send listMessage without the bot crash
 - ✅ **Added offerCall** – Now you can call a Person by using `xxxx.offerCall(49156780000@s.whatsapp.net);`
+- ✅ **makeInMemoryStore** – makeInMemoryStore and store are back
 
 ---
 
