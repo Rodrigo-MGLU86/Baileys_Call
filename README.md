@@ -30,7 +30,7 @@
 ### package.json
 ```json
 "dependencies": {
-  "@angstvorfrauen/baileys": "*"
+  "@angstvorfrauen/baileys": "*" 
 }
 ```
 
