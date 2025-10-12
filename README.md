@@ -1,84 +1,77 @@
 # @angstvorfrauen/baileys
 
+<div align="center">
+
+  <img src="https://raw.githubusercontent.com/teamolduser/database/refs/heads/main/image/anya.png" width="350px">
+
+  <br>
+  
+  <div style="background: linear-gradient(90deg, #6366F1, #3B82F6, #2DD4BF); padding: 8px; border-radius: 10px; margin: 15px 0;">
+    <span style="font-size: 18px; font-weight: bold; color: white;">🔥 Ultimate WhatsApp Web API Experience 🥵</span>
+  </div>
+  
+  ![TypeScript](https://img.shields.io/badge/-%F0%9F%94%B7%20TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0D1117)
+  ![JavaScript](https://img.shields.io/badge/-%F0%9F%94%B8%20JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=F7DF1E&labelColor=0D1117)
+  ![WhatsApp](https://img.shields.io/badge/-%F0%9F%92%AC%20WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=0D1117)
+  ![NPM](https://img.shields.io/badge/-%F0%9F%93%A6%20npm-CB3837?style=for-the-badge&logo=npm&logoColor=white&labelColor=0D1117)
+</div>
+
 ---
 
-## ✨ Features
+## Changelog
 
-- ✅ **libsignal-xeuka** – Improved cryptography library  
-- ✅ **Buttons Support** – Send Buttons Fixed `lid` issue
-- ✅ **Device Pairing iOS** – Pair with iOS devices easily  
-- ✅ **Custom Pairing Code** – Generate and use your own pairing code  
-- ✅ **Removed Timeout** – No unwanted session timeouts  
-- ✅ **Updated Proto** – The Proto has been Updated to the newest Version
-- ✅ **isBot Fixed in Groups** – `isBot` detection now works correctly in group chats  
-- ✅ **Fixed ListType/ListMessage** – Now you can send listMessage without the bot crash
-- ✅ **Added offerCall** – Now you can call a Person by using `xxxx.offerCall(49156780000@s.whatsapp.net);`
-- ✅ **makeInMemoryStore** – makeInMemoryStore and store are back
+- **libsignal-xeuka** – No more bad Mac Errors anymore
+- **Buttons Support** – Send buttonMessage and Interactive Message
+- **Buttons LID Fix** - Fixed LID && JID for Button Support
+- **Linked Device iOS/Safari** – Linked Device set to IOS/Safari
+- **Custom Pairing Code** – Generate and use your own pairing code
+- **Removed Timeout** – Removed Timeout Function
+- **Updated Proto** – WAProto Updated to the Newest Version
+- **isBot Fixed in Groups** – `isBot` is Working in Groups and Private Chat properly
+- **Fixed ListType/ListMessage** – listMessage is Sendable
+- **Added offerCall** – Baileys can Call a Number in WhatsApp
+- **Fix ACK** – Has been Removed (You can Turn on if needed)
+- **Added Poll Decrypt Support** – Poll Selection Works again
 
 ---
 
-## 📦 Installation
+## Installation
 
-Yarn
+### package.json
+```json
+"dependencies": {
+  "@angstvorfrauen/baileys": "*"
+}
 ```
+
+### Terminal Installtion
+```bash
+npm install @angstvorfrauen/baileys
+```
+or
+```bash
 yarn add @angstvorfrauen/baileys
 ```
 
-Npm
+---
+
+## Functions
+
+Offer Call Function
+
+```js
+const jid = "xxxxx@s.whatsapp.net";
+sock.offerCall(jid);
 ```
-npm install @angstvorfrauen/baileys
+
+Custom Pairing Code
+
+```js
+const number = "xxxxxxx";
+const code = "AAAAAAAA";
+await sock.requestPairingCode(number, code);
 ```
 
 ---
 
-## 🔧 Usage
-
-Call Example
-
-```js
-case "call": {
-  const [mobileNumber, spamCountStr] = args.join(" ").split(",").map(arg => arg.trim());
-  const target1 = mobileNumber.replace(/[+\s()-]/g, "") + "@s.whatsapp.net";
-  const spam1 = parseInt(spamCountStr);
-  sock.sendMessage(from, { react: { text: "⏱️", key: m.key } });
-  for (let i = 0; i < spam1; i++) {
-    sock.offerCall(target1);
-  }
-  await delay(3000);
-  sock.sendMessage(from, { react: { text: "✔️", key: m.key } });
-}
-break;
-```
-
-Info Example
-
-```js
-case "info": {
-  sock.sendMessage(from, { react: { text: "🍀", key: info.key } });
-  const infogetclone1 = isQuotedMsg ? 
-    info.message.extendedTextMessage.contextInfo.quotedMessage.extendedTextMessage : 
-    info.message.extendedTextMessage.contextInfo.quotedMessage;
-  const formattedJson = JSON.stringify(infogetclone1, null, 2);
-  const finalCode = `case "sock": {\n  sock.sendjson(from,${formattedJson.replace(/^/gm, " ")});\n}\nbreak;`;
-  sock.sendjson(from, {
-    "extendedTextMessage": {
-      "text": finalCode,
-      "contextInfo": {
-        "forwardingScore": 127,
-        "isForwarded": true,
-        "forwardedNewsletterMessageInfo": {
-          "newsletterJid": "999999999@newsletter",
-          "severMessageId": "1",
-          "newsletterName": `𝐡𝐭𝐭𝐩𝐬://𝐭.𝐦𝐞/𝐑𝐨𝐜𝐤𝐞𝐭𝐂𝐥𝐢𝐞𝐧𝐭🕺`,
-          "contentType": "LINK_CARD"
-        }
-      }
-    }
-  });
-}
-break;
-```
-
----
-
-# Made by Xeuka 🍀
+# Xeuka
