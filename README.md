@@ -22,7 +22,6 @@
 - **Fixed ListType/ListMessage** – listMessage is Sendable
 - **Added offerCall** – Baileys can Call a Number in WhatsApp
 - **Fix ACK** – Has been Removed (You can Turn on if needed)
-- **Added Poll Decrypt Support** – Poll Selection Works again
 
 ---
 
