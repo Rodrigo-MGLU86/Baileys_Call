@@ -1,12 +1,16 @@
 {
   "name": "@angstvorfrauen/baileys",
-  "version": "2.0.9",
+  "version": "2.2.0",
   "description": "Websocket Whatsapp API for Node.js",
   "keywords": [
     "whatsapp",
     "websocket",
     "api",
-    "nodejs"
+    "nodejs",
+    "baileys",
+    "wabot",
+    "proto",
+    "whatsapp-websocket"
   ],
   "homepage": "https://github.com/angstvorfrauen/Baileys",
   "repository": {
@@ -21,60 +25,58 @@
     "WAProto/*"
   ],
   "scripts": {
-    "changelog:last": "conventional-changelog -p angular -r 2",
-    "changelog:preview": "conventional-changelog -p angular -u",
     "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "example": "node --inspect Example/example.js",
+    "changelog:preview": "conventional-changelog -p angular -u",
+    "changelog:last": "conventional-changelog -p angular -r 2",
     "gen:protobuf": "sh WAProto/GenerateStatics.sh",
+    "example": "node --inspect Example/example.js",
     "lint": "eslint src --ext .js",
     "lint:fix": "yarn lint --fix",
     "release": "release-it",
     "test": "jest"
   },
   "dependencies": {
-    "@cacheable/node-cache": "*",
-    "@hapi/boom": "*",
     "@whiskeysockets/eslint-config": "github:whiskeysockets/eslint-config",
-    "async-mutex": "*",
-    "axios": "*",
-    "cache-manager": "*",
-    "figlet": "*",
-    "fs": "*",
+    "@cacheable/node-cache": "*",
     "gradient-string": "2.0.2",
-    "jimp": "*",
     "libsignal-xeuka": "*",
-    "lodash": "*",
     "moment-timezone": "*",
     "music-metadata": "*",
-    "os": "*",
-    "path": "*",
+    "cache-manager": "*",
+    "async-mutex": "*",
+    "@hapi/boom": "*",
     "pbjs": "^0.0.14",
-    "pino": "*",
     "protobufjs": "*",
+    "jimp": "0.16.0",
     "readline": "*",
-    "ws": "*"
+    "lodash": "*",
+    "figlet": "*",
+    "axios": "*",
+    "path": "*",
+    "pino": "*",
+    "ws": "*",
+    "fs": "*",
+    "os": "*"
   },
   "devDependencies": {
+    "conventional-changelog-cli": "*",
+    "link-preview-js": "*",
+    "protobufjs-cli": "*",
+    "cache-manager": "*",
     "@types/jest": "*",
     "@types/node": "*",
+    "release-it": "*",
     "@types/ws": "*",
-    "cache-manager": "*",
-    "conventional-changelog-cli": "*",
     "eslint": "*",
     "jest": "*",
     "jimp": "*",
     "json": "*",
-    "link-preview-js": "*",
-    "open": "*",
-    "protobufjs-cli": "*",
-    "release-it": "*",
-    "sharp": "*"
+    "open": "*"
   },
   "peerDependencies": {
-    "audio-decode": "*",
-    "jimp": "*",
     "link-preview-js": "*",
-    "sharp": "*"
+    "audio-decode": "*",
+    "jimp": "*"
   },
   "peerDependenciesMeta": {
     "audio-decode": {
