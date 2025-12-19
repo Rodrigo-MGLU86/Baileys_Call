@@ -11,8 +11,8 @@
 
 ## Version
 
-- **Baileys Version** – 2.3000.1028619397
-- **Proto Version** – 2.3000.1028620558
+- **Web Version** – 2.3000.1031276083
+- **Proto Version** – 2.3000.1031276083
 
 ---
 
@@ -27,7 +27,8 @@
 - **Fixed Jimp** – You can change Group Profile Picture again
 - **Buttons Support** – Send Buttons and Interactive
 - **Proto Updated** – Updated Proto to newest Version
-
+- **Stable** – Baileys more Stable
+- **Fixed Button** – Fixed `Unsupported Message` on buttonsMessage etc.
 ---
 
 ## Installation
@@ -39,12 +40,12 @@
 }
 ```
 
-### Terminal Installtion
+### NPM Installtion
 ```bash
 npm install @angstvorfrauen/baileys
 ```
-or
 
+### YARN Installtion
 ```bash
 yarn add @angstvorfrauen/baileys
 ```
@@ -85,4 +86,4 @@ await sock.requestPairingCode(number, code);
 
 ---
 
-## Made with Love by Xeuka <3
+## Made by Xeuka
